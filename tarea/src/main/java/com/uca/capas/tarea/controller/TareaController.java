@@ -23,31 +23,7 @@ public class TareaController {
 		 
 		return "commons/index";
 	}
-	
-	@RequestMapping("/parametros")
-	public ModelAndView parametros(HttpServletRequest request) {
-		ModelAndView mav = new ModelAndView();
-		String nombre = request.getParameter("nombre");
-		String apellido = request.getParameter("apellido");
-		String fecha_nac = request.getParameter("fecha_nac");
-		String lugar_nac = request.getParameter("lugar_nac");
-		String instituto = request.getParameter("instituto");
-		String tel_fijo = request.getParameter("tel_fijo");
-		String tel_movil = request.getParameter("tel_movil");
-		
-		
-		mav.addObject("nombre", nombre);
-		mav.addObject("apellido", apellido);
-		mav.addObject("fecha_nac", fecha_nac);
-		mav.addObject("lugar_nac", lugar_nac);
-		mav.addObject("instituto", instituto);
-		mav.addObject("tel_fijo", tel_fijo);
-		mav.addObject("tel_movil", tel_movil);
-		
-		mav.setViewName("clases/clase10/resultado");
-		return mav;
-		
-	}
+
 	@RequestMapping("/parametros1")
 	public ModelAndView parametros1(HttpServletRequest request) throws ParseException {
 		ModelAndView mav = new ModelAndView();
@@ -66,7 +42,7 @@ public class TareaController {
 		String error1="El campo Nombre debe de ser de mínimo 1 carácter y máximo 25 caracteres";
 		String error2="El campo Apellido debe de ser de mínimo 1 carácter y máximo 25 caracteres";
 		String error3="El campo Lugar de Nacimiento debe de ser de mínimo 1 carácter y máximo 25 caracteres";
-		String error4="El campo instituto debe de ser de 8 números exactamente";
+		String error4="El campo Lugar de Nacimiento debe de ser de mínimo 1 carácter y máximo 100 caracteres";
 		String error5="El campo Telefono fijo debe de ser de 8 números exactamente";
 		String error6="El campo Telefono Movil debe de ser de 8 números exactamente";
 		String correcto="Alumno ingresado con exito";
